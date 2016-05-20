@@ -20,7 +20,7 @@ requirements = [
 
 setup(
     name='otscli',
-    version='0.0.1',
+    version='0.0.2',
     description='Console client for one time secret.',
     long_description=readme + '\n\n' + history,
     author='Vadim Aleksandrov',

@@ -25,9 +25,9 @@ def client():
     ots_data = dict(secret=args.ots_secret)
     if args.ots_passphrase:
         ots_data.update({'passphrase':args.ots_passphrase})
-    url = "%s/api/v1/share" % args.ots_url
+    url = "{}/api/v1/share".format(args.ots_url)
     r = requests.post(url, data=ots_data, verify=False)
-    print "%s/secret/%s" % (args.ots_url, r.json()["secret_key"])
+    print("{}/secret/{}" .format(args.ots_url, r.json()["secret_key"]))
 
 if __name__ == "__main__":
     client()
